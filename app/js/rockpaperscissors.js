@@ -1,10 +1,9 @@
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
-'use strict';
 
 function getInput() {
-    console.log('Please choose either 'rock', 'paper', or 'scissors'.')
+    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
 }
 function randomPlay() {
@@ -40,14 +39,14 @@ function getWinner(playerMove,computerMove) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    if (playerMove==computerMove) {
+    if (playerMove===computerMove) {
         winner='tie';
-    } else if (playerMove=='rock') {
-        winner = (computerMove=='paper' ?  'computer' : 'player');
-    } else if (playerMove=='paper') {
-        winner=(computerMove=='scissors' ? 'computer' : 'player');
-    } else if (playerMove=='scissors') {
-        winner=(computerMove=='rock' ? 'computer' : 'player');
+    } else if (playerMove==='rock') {
+        winner = (computerMove==='paper' ?  'computer' : 'player');
+    } else if (playerMove==='paper') {
+        winner=(computerMove==='scissors' ? 'computer' : 'player');
+    } else if (playerMove==='scissors') {
+        winner=(computerMove==='rock' ? 'computer' : 'player');
     }
     return winner;
 }
@@ -62,9 +61,9 @@ function playToFive() {
         var playerMove = getPlayerMove();
         var computerMove = getComputerMove();
         var winner = getWinner(playerMove,computerMove);
-        if (winner=='player') {
+        if (winner==='player') {
             playerWins++;
-        } else if (winner=='computer') {
+        } else if (winner==='computer') {
             computerWins++;
         }
         console.log("Player chose " + playerMove + ", Computer chose " + computerMove + ", so the winner is " + winner);
